@@ -1,0 +1,139 @@
+body {
+    background-color: lightgray !important;
+}
+
+#registration_form_username{
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+#user_username{
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+/* #registration_form_username:hover{
+    background-color: lightgreen;
+} */
+
+
+#registration_form_plainPassword{
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  
+}
+#user_password{
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  
+}
+#registration_form_pseudo{
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    position: relative;
+   
+  
+}
+#user_pseudo{
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    position: relative;
+   
+  
+}
+
+
+
+#registration_form_agreeTerms{
+   position: relative;
+   right: -1vh;
+   top: 0.2vh;
+}
+
+#butt{
+    position: relative;
+    left: 45vh;
+}
+
+div.conditions{
+    top: 1vh;
+    position: relative;
+    
+}
+
+div.pseudo{
+    top: -1vh;
+    position: relative;
+}
+label[for="user_username"]{
+    margin-bottom: 10px;
+    
+}
+label[for="user_pseudo"]{
+    margin-bottom: 10px;
+}
+label[for="user_password"]{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+#button{
+    margin-top: 10px;
+}
+
+.card-img-top{
+    min-height: 500px;
+    min-width: 300px;
+}

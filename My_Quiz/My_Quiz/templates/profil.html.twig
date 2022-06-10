@@ -1,0 +1,75 @@
+{% extends 'base.html.twig' %}
+
+{%  block body %}
+{% if app.user.Roles|join == 'ROLE_ADMIN' %}
+	<style>
+	h5{
+		
+		font-family: italic;
+	}
+	</style>
+	{%  endif %}
+	{% if app.user.isVerified == 1 %}
+
+	<section class="h-100 gradient-custom-2">
+		<div class="container py-5 h-100">
+			<div class="row d-flex justify-content-center align-items-center h-100">
+				<div class="col col-lg-9 col-xl-7">
+					<div class="card">
+						<div class="rounded-top text-white d-flex flex-row" style="background-image: url(https://cdn.pixabay.com/photo/2022/03/15/08/23/school-supplies-7069763_960_720.jpg); height:200px; background-">
+							<div class="ms-4 mt-5 d-flex flex-column" style="width: 150px;">
+								<img src="https://isobarscience.com/wp-content/uploads/2020/09/default-profile-picture1.jpg" alt="Generic placeholder image" class="img-fluid img-thumbnail mt-4 mb-2" style="width: 150px; z-index: 1">
+								<button type="button" class="btn btn-outline-dark" data-mdb-ripple-color="dark" style="z-index: 1;">
+									<a style="text-decoration: none; color: black;" href="{{ path('Edit', {'id': app.user.id}) }}">
+										Edit profile
+									</a>
+								</button>
+
+								<button type="button" class="btn btn-outline-dark" data-mdb-ripple-color="dark" style="z-index: 1; margin-top: 10px;">
+									<a style="text-decoration: none; color: black;" href="">
+										History
+										
+									</a>
+								</button>
+							</div>
+							<div class="ms-3" style="margin-top: 120px;">
+								<h5>{{ app.user.pseudo }}</h5>
+								<p>Quiz {{app.user.Roles|join|replace({'ROLE_': ""})|lower|capitalize}}</p>
+							</div>
+						</div>
+						<div class="p-4 text-black" style="background-color: #f8f9fa;">
+							<div class="d-flex justify-content-end text-center py-1">
+								<div>
+									<p class="mb-1 h5">253</p>
+									<p class="small text-muted mb-0">Quiz Made</p>
+								</div>
+								<div class="px-3">
+									<p class="mb-1 h5">100</p>
+									<p class="small text-muted mb-0">Correct Questions</p>
+								</div>
+								<div>
+									<p class="mb-1 h5">50</p>
+									<p class="small text-muted mb-0">Wrong Questions</p>
+								</div>
+							</div>
+						</div>
+						<div class="card-body p-4 text-black">
+							<div class="mb-5">
+								<p class="lead fw-normal mb-1">About</p>
+								<div class="p-4" style="background-color: #f8f9fa;">
+									<p class="font-italic mb-1">Email:
+										{{ app.user.username|capitalize }}</p>
+
+									<p class="font-italic mb-1">Role:
+										{{app.user.Roles|join|replace({'ROLE_': ""})}}
+									</p>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+			{%  endif %}
+	{% endblock %}

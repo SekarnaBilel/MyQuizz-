@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register
+{% endblock %}
+
+{% block body %}
+	<link rel="stylesheet" href="{{ asset('styles/app.css') }}">
+	<div class="container mt-5">
+		<div class="row justify-content-center">
+			<div class="col-md-8">
+				<div class="card">
+					{% for flash_error in app.flashes('verify_email_error') %}
+						<div class="alert alert-danger" role="alert">{{ flash_error }}</div>
+					{% endfor %}
+					{% block stylesheet  %}
+						{{ encore_entry_link_tags('app') }}
+					{% endblock %}
+					{{ is_granted('ROLE_PREVIOUS_ADMIN') ? 'style="background-color: red !important"' }}
+					<div class="card-header">{{'Register'}}</div>
+					<div class="card-body">
+						{{ form_start(registrationForm) }}
+						<div class="row mb-3">
+
+							{{ form_row(registrationForm.username, {
+                                label: 'Email'
+                             }) }}
+
+
+						</div>
+
+						<div class="Pseudo">
+							{{ form_row(registrationForm.pseudo, {
+                                
+                            }) }}
+
+						</div>
+
+						{{ form_row(registrationForm.plainPassword, {
+                                label: 'Mot de Passe'
+                            }) }}
+
+						<div class="conditions">
+							{{ form_row(registrationForm.agreeTerms, { 
+
+                                label: 'Accepter les conditions '
+                            
+                            }) }}
+						</div>
+
+
+						<button id="butt" type="submit" class="btn btn-primary">Register</button>
+						{{ form_end(registrationForm) }}
+					</div>
+				</div>
+			</div>
+			<div>
+				<div>
+
+				{% endblock %}

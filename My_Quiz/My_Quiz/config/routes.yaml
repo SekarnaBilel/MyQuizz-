@@ -1,0 +1,34 @@
+controllers:
+    resource: ../src/Controller/
+    type: annotation
+
+kernel:
+    resource: ../src/Kernel.php
+    type: annotation
+
+profil:
+    path: /profil
+    controller: App\Controller\ProfilController::profil
+
+main:
+    path: /
+    controller : App\Controller\Main::index
+    
+categorie:
+    path : /categorie
+    controller : App\Controller\Catégorie::index
+
+Edit: 
+    path: /edit/{id}
+    controller: App\Controller\EditController::Edit
+    methods : GET|POST
+
+EditPass: 
+    path: /editpassword
+    controller: App\Controller\EditController::EditPass
+
+# login:
+#     path: /login
+    # index:
+    #     path: /test
+    #     host: ../src/test.php

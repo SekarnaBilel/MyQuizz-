@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+	<div class="container-mt-3">
+		<div
+			class="row">
+			{# <h1>{{categorie.name}}</h1> #}
+			<div class="container">
+				<div class="row justify-content-center mt-5">
+					<div class="col-md-6">
+						<div class="card mb-3" style="width: 100%;">
+						{# {% for category in categorie  %}
+						{% if category.name == category.id  %}
+						<h1>{{category.name}}</h1>
+						{% endif %}
+						{% endfor %} #}
+							<div class="card-body ">
+								<form method="POST" action="/score">
+									<ul>
+										{% for questions in question  %}
+											<li class="card-title">{{questions.question}}</li>
+											{% for reponses in reponce  %}
+												{% if reponses.question.id == questions.id %}
+													<input type="radio" name="{{ questions.id }}" value="{{ reponses.id }}" required>
+													{{ reponses.reponse }}
+												</input>
+												<br/>
+											{% endif %}
+										{% endfor %}
+									{% endfor %}
+									<br/>
+									{# <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}"> #}
+									<button class="btn btn-success " type="submit">
+										Send
+									</button>
+								</ul>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>{% endblock %}
